@@ -22,8 +22,8 @@ const HomeScreen = () => {
           Develop a financial statistics web application that displays various
           financial metrics and statistics. The application should fetch
           real-time data from the internet, process it, and present it in an
-          intuitive and user-friendly manner. Additionally, a simple Node.js
-          backend should be implemented to handle data fetching and processing.
+          intuitive and user-friendly manner. Additionally, a simple backend
+          should be implemented to handle data fetching and processing.
         </Text>
       </View>
     </View>
