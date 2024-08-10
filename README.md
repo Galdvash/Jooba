@@ -1,4 +1,4 @@
-# My Backend Project
+<!-- # My Backend Project
 
 This is a backend server project built with Express.js. The server provides API endpoints to fetch financial data and other related information.
 
@@ -72,4 +72,4 @@ This project is licensed under the ISC License - see the [LICENSE](LICENSE) file
 
 ## Author
 
-- **Your Name** - [Your GitHub Profile](https://github.com/Galdvash)
+- **Your Name** - [Your GitHub Profile](https://github.com/Galdvash) -->
