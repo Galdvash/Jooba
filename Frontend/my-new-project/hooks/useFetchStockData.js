@@ -9,7 +9,8 @@ const useFetchStockData = (stockSymbol) => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `http://192.168.1.113:8989/api/stocks/${stockSymbol}`
+          `http://192.168.0.133:8989/api/stocks/${stockSymbol}`,
+          { timeout: 10000 } // Set a 10-second timeout
         );
         setData(response.data);
         setIsLoading(false);

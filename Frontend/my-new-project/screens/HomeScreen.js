@@ -13,11 +13,14 @@ const HomeScreen = () => {
       ]}
     >
       <View style={styles.content}>
-        <Text style={[styles.title, { color: isDarkTheme ? "#fff" : "#000" }]}>
+        <Text style={[styles.title, { color: isDarkTheme ? "black" : "blue" }]}>
           Welcome to the Financial Statistics App
         </Text>
         <Text
-          style={[styles.description, { color: isDarkTheme ? "#ccc" : "#000" }]}
+          style={[
+            styles.description,
+            { color: isDarkTheme ? "black" : "blue" },
+          ]}
         >
           Develop a financial statistics web application that displays various
           financial metrics and statistics. The application should fetch
