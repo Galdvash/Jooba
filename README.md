@@ -1,153 +1,75 @@
-# Jooba
+# My Backend Project
 
-const readmeContent = `
-
-# React Native & Node.js Project with MongoDB
-
-This project is a mobile application built using React Native for the frontend and Node.js with Express for the backend. The application connects to a MongoDB database to store and retrieve data, and it uses CORS to handle cross-origin requests. Additionally, the app features a dark mode and integrates real-time news and data graphs.
+This is a backend server project built with Express.js. The server provides API endpoints to fetch financial data and other related information.
 
 ## Features
 
-- **Frontend**: Developed with React Native, featuring dynamic data display and a dark mode option for enhanced user experience.
-- **Backend**: Developed with Node.js and Express, serving API endpoints for data retrieval and storage. \`nodemon\` is used for automatic server restarts during development.
-- **Database**: MongoDB is used to store data, including titles, descriptions, and images.
-- **Real-Time News**: Fetches live news articles using the \`https://newsdata.io\` API.
-- **Real-Time Data Graphs**: Displays real-time data graphs using Yahoo Finance data, without requiring an API key.
-- **CORS**: Cross-Origin Resource Sharing is enabled to allow communication between the React Native app and the backend server.
-- **Testing**: API endpoints were tested using Postman to ensure correct functionality.
-- **ES Modules**: The project is configured to use ES modules (\`import/export\`) instead of CommonJS (\`require/module.exports\`) by setting \`type: "module"\` in \`package.json\`.
-
-## Prerequisites
-
-Before running the project, make sure you have the following installed:
-
-- Node.js (v14 or later)
-- Yarn (Package Manager)
-- MongoDB
-
-## Installation
-
-### 1. Clone the repository:
-
-\`\`\`bash
-git clone https://github.com/yourusername/your-repo-name.git
-cd your-repo-name
-\`\`\`
-
-### 2. Install backend dependencies:
-
-Navigate to the backend directory and install the necessary packages using Yarn:
-
-\`\`\`bash
-cd backend/my-back-app
-yarn install
-\`\`\`
-
-### 3. Install frontend dependencies:
-
-Navigate to the React Native project directory and install the necessary packages:
-
-\`\`\`bash
-cd ../../client
-yarn install
-\`\`\`
-
-### 4. Install additional React Native libraries:
-
-Ensure you have installed the necessary libraries for React Native:
-
-\`\`\`bash
-yarn add react-native-svg
-\`\`\`
-
-## Usage
-
-### 1. Run MongoDB:
-
-Make sure MongoDB is running on your machine. By default, the application connects to a MongoDB instance running locally on port 27017.
-
-### 2. Start the backend server:
-
-Navigate to the backend directory and start the server:
-
-\`\`\`bash
-cd backend/my-back-app
-yarn start
-\`\`\`
-
-The server will start on \`http://localhost:8989\`.
-
-### 3. Start the React Native app:
-
-Navigate to the React Native project directory and start the app:
-
-\`\`\`bash
-cd ../../client
-yarn start
-\`\`\`
-
-### 4. Access the application:
-
-- **React Native App**: Follow the prompts to run the app on your Android or iOS device/emulator.
-- **Backend Server**: Test the API using Postman or directly within the app.
-
-## API Endpoints
-
-The following API endpoints are available:
-
-- **GET** \`/api/items\`: Retrieve all items from the database.
-- **POST** \`/api/items\`: Add a new item to the database. The request body should include \`title\`, \`description\`, and \`image\`.
-
-Example POST request body:
-
-\`\`\`json
-{
-"title": "Sample Item",
-"description": "This is a sample item.",
-"image": "https://example.com/image.jpg"
-}
-\`\`\`
-
-## Application Overview
-
-This application provides a platform to display real-time news and data visualizations. The key features include:
-
-- **Real-Time News**: The app fetches news articles using the \`https://newsdata.io\` API, displaying the latest updates on various topics directly in the app.
-- **Real-Time Data Graphs**: Utilizing data from Yahoo Finance, the app displays real-time financial graphs. The integration does not require an API key, making it easy to implement.
-- **Dark Mode**: Users can switch between light and dark modes to enhance the viewing experience, especially in low-light conditions.
-
-### Dark Mode
-
-The application includes a dark mode feature that adjusts the UI to be easier on the eyes in low-light environments. This feature can be toggled within the app settings.
+- **Express.js**: A minimal and flexible Node.js web application framework.
+- **Axios**: Used for making HTTP requests to external APIs.
+- **CORS**: Middleware for handling Cross-Origin Resource Sharing.
+- **dotenv**: Module to load environment variables from a `.env` file.
+- **Yahoo Finance 2**: A library for fetching financial data from Yahoo Finance.
+- **Nodemon**: A tool that automatically restarts the server when file changes in the directory are detected.
 
 ## Project Structure
 
-\`\`\`
-project/
-├── backend/
-│ └── my-back-app/
-│ ├── node_modules/
-│ ├── server.js
-│ └── package.json
-├── client/
-│ ├── node_modules/
-│ ├── public/
-│ ├── src/
-│ │ ├── App.js
-│ │ ├── App.css
-│ │ └── index.js
-│ └── package.json
-└── README.md
-\`\`\`
+- `server.mjs`: The main entry point of the server.
+- `apiHandlers.js`: Contains the API handler functions for different endpoints.
+- `package.json`: Project metadata and dependencies.
+- `yarn.lock`: Yarn lockfile for dependency versions.
 
-## Troubleshooting
+## Installation
 
-- **CORS Issues**: Ensure that the \`cors\` package is installed and configured correctly in the backend to allow cross-origin requests.
-- **MongoDB Connection**: If MongoDB is not running or the connection string is incorrect, the backend server may fail to connect to the database.
+1. **Clone the repository**:
+
+   ```bash
+   git clone https://github.com/your-username/my-backend-project.git
+   cd my-backend-project
+   ```
+
+2. **Install dependencies**:
+
+   ```bash
+   yarn install
+   ```
+
+3. **Set up environment variables**:
+
+   - Create a `.env` file in the root directory.
+   - Add any necessary environment variables, such as API keys.
+
+4. **Run the server**:
+   ```bash
+   yarn start
+   ```
+
+## API Endpoints
+
+### Fetch Stock Data
+
+- **Endpoint**: `/api/stocks/:symbol`
+- **Method**: `GET`
+- **Description**: Fetches stock data for the specified symbol from the Yahoo Finance API.
+
+### Fetch Stock News
+
+- **Endpoint**: `/api/news/:symbol`
+- **Method**: `GET`
+- **Description**: Fetches news related to the specified stock symbol.
+
+## Dependencies
+
+- [Express.js](https://expressjs.com/)
+- [Axios](https://axios-http.com/)
+- [CORS](https://www.npmjs.com/package/cors)
+- [dotenv](https://www.npmjs.com/package/dotenv)
+- [Yahoo Finance 2](https://www.npmjs.com/package/yahoo-finance2)
+- [Nodemon](https://www.npmjs.com/package/nodemon)
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-`;
+This project is licensed under the ISC License - see the [LICENSE](LICENSE) file for details.
 
-console.log(readmeContent);
+## Author
+
+- **Your Name** - [Your GitHub Profile](https://github.com/Galdvash)

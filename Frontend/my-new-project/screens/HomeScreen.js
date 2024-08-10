@@ -33,20 +33,34 @@ const HomeScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-  },
-  content: {
-    flex: 1,
     justifyContent: "center",
     alignItems: "center",
     padding: 20,
   },
+  content: {
+    backgroundColor: "#fafafa",
+    padding: 20,
+    borderRadius: 10,
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 5 },
+    shadowOpacity: 0.3,
+    shadowRadius: 10,
+    elevation: 10,
+  },
   title: {
-    fontSize: 24,
+    fontSize: 28,
     fontWeight: "bold",
-    marginBottom: 10,
+    marginBottom: 15,
+    textAlign: "center",
+    color: "#4a90e2",
+    textShadowColor: "rgba(0, 0, 0, 0.1)",
+    textShadowOffset: { width: 2, height: 2 },
+    textShadowRadius: 5,
   },
   description: {
-    fontSize: 16,
+    fontSize: 18,
+    lineHeight: 24,
+    color: "#757575",
     textAlign: "center",
   },
 });
